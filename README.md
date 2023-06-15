@@ -45,33 +45,15 @@ Project_3/
 │   │   ├── players_20.csv
 │   │   └── teams_and_leagues.csv
 │   └── clean_data.ipynb
-├── data_visualization/
-│   ├── .ipynb_checkpoints/
-│   │   └── ...
-│   ├── Fifa File/
-│   │   └── ...
-│   ├── Images/
-│   │   └── ...
-│   ├── Final Work.ipynb
-│   └── Final.pdf
 ├── static/
 │   ├── css/
 │   │   └── style.css
-│   ├── imgs/
-│   │   ├── fifa15.jpeg
-│   │   ├── fifa16.jpeg
-│   │   ├── fifa17.jpeg
-│   │   ├── fifa19.jpeg
-│   │   ├── fifa19.jpeg
-│   │   └── fifa20.jpeg
 │   └── js/
 │       ├── player.js
 │       └── logic.js
-├── templates/
-│   ├── index.html
-│   ├── league.html
-│   └── player.html
-├── app.py
+├── index.html
+├── league.html
+└── player.html
 └── README.md
 ```
 - `data/`: This directory contains subdirectories and files related to data processing and storage.
