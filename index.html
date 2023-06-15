@@ -9,7 +9,7 @@
         <meta name="robots" content="index, follow">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>UofT Data Analytics Bootcamp Project 3</title>
-        <link rel="stylesheet" type="text/css" href="static/css/style.css">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -61,6 +61,6 @@
         <footer>
             <p>Project 3</p>
         </footer>
-        <script src="static/js/logic.js"></script>
+        <script src="{{ url_for('static', filename='js/logic.js') }}"></script>
     </body>
 </html>
