@@ -9,50 +9,6 @@
 }
 
 html {
-    background-color: rgb(226, 233, 241);
-}
-
-body {
-    background-color: rgb(226, 233, 241);
-    color: rgb(16, 19, 21);
-}
-
-header {
-    background-color: rgb(127, 179, 243);
-    text-align: center;
-    padding: 10px;
-}
-
-h1 {
-    background-color: rgb(193, 217, 242);
-    color: rgb(16, 19, 21);
-    font-size: 48pt;
-    text-align: center;
-    padding: 10px;
-}
-
-footer {
-    background-color: rgb(135, 182, 240);
-    text-align: center;
-    padding: 10px;
-}
-
-.container {
-    margin-top: 50px;
-}
-
-/*
-* {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
-    font-size: 14pt;
-    background: none;
-    color: rgb(16, 19, 21);
-    margin: 0;
-    border: 0;
-    padding: 0;
-}
-
-html {
     background-color: rgb(193, 217, 242);
 }
 
@@ -72,6 +28,7 @@ h1 {
     text-align: center;
 }
 
+/* Create two columns/boxes that float next to each other */
 .filters {
     float: left;
     width: 15%;
@@ -81,15 +38,18 @@ h1 {
     margin: 1%;
 }
 
+/* Style the list inside the menu */
 .filters ul {
     list-style-type: none;
     padding: 0;
 }
 
+/* Space out the table links */
 .filters li {
     margin-bottom: 10px;
 }
 
+/* Style the table links */
 .filters a, .filters a:visited {
     display: block;
     padding: 5px;
@@ -97,16 +57,19 @@ h1 {
     color: rgb(51, 61, 67);
 }
 
+/* Add hover effect to table links */
 .filters a:hover {
     background-color: rgb(135, 182, 240);
     color: rgb(32, 38, 42);
 }
 
+/* Add active/current page effect to table links */
 .filters a.active {
     background-color: rgb(83, 132, 207);
     color: rgb(16, 19, 21);
 }
 
+/* Clear floats after the columns */
 section::after {
     content: "";
     display: table;
@@ -127,7 +90,7 @@ section::after {
 table {
     width: 100%;
     border-collapse: collapse;
-    position: relative;
+    position: relative;  /* Add this line to make the table a containing block for the sticky headers */
 }
 
 th, td {
@@ -139,17 +102,19 @@ th, td {
 th {
     background-color: rgb(135, 182, 240);
     color: rgb(16, 19, 21);
-    position: sticky;
-    top: 0;
-    z-index: 1;
+    position: sticky;  /* Add this line to make the headers sticky */
+    top: 0;  /* Add this line to specify the distance from the top where the headers will stick */
+    z-index: 1;  /* Add this line to make the headers appear above the table cells */
 }
 
+/* Style the footer */
 footer {
     background-color: rgb(135, 182, 240);
     text-align: center;
     padding: 10px;
 }
 
+/* Style the top navigation */
 .top-nav {
     background-color: rgb(124, 168, 222);
     text-align: center;
@@ -185,4 +150,7 @@ footer {
     background-color: rgb(98, 134, 178);
     color: rgb(9, 12, 13);
 }
-*/
+
+#map {
+    height: 75vh;
+}

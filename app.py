@@ -41,10 +41,15 @@ def index():
 def player():
     # Create a SQLAlchemy engine to connect to the database
     engine = create_engine('sqlite:///data/db/database.db')
-    # Query the unique values from the `short_name` column of the `players` table
-    query = "SELECT DISTINCT short_name FROM players_15"
-    results = engine.execute(query)
-    players = [row[0] for row in results]
+    # Query the required columns from all the tables
+    tables = ['players_15', 'players_16', 'players_17', 'players_18', 'players_19', 'players_20']
+    # Fetch the results from each table and concatenate them
+    players = []
+    for table in tables:
+        # Query the unique values from the `short_name` column of the `players` table
+        query = f"SELECT DISTINCT short_name FROM {table}"
+        results = engine.execute(query)
+        players = [row[0] for row in results]
     # Render the player.html template and pass the players data to it
     return render_template('player.html', players=players)
 
@@ -52,12 +57,21 @@ def player():
 def league():
     # Create a SQLAlchemy engine to connect to the database
     engine = create_engine('sqlite:///data/db/database.db')
-    # Query the unique values from the `short_name` column of the `players` table
-    query = "SELECT DISTINCT short_name FROM players_15"
-    results = engine.execute(query)
-    players = [row[0] for row in results]
-    # Render the league.html template and pass the players data to it
+    # Query the required columns from all the tables
+    tables = ['players_15', 'players_16', 'players_17', 'players_18', 'players_19', 'players_20']
+    # Fetch the results from each table and concatenate them
+    players = []
+    for table in tables:
+        # Query the unique values from the `short_name` column of the `players` table
+        query = f"SELECT DISTINCT short_name FROM {table}"
+        results = engine.execute(query)
+        players = [row[0] for row in results]
+    # Render the player.html template and pass the players data to it
     return render_template('league.html', players=players)
+
+@app.route('/map')
+def map():
+    return render_template('map.html')
 
 @app.route('/data')
 def get_table_data():
